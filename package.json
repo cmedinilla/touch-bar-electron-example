@@ -1,0 +1,10 @@
+{
+  "name": "touch-bar-electron-example",
+  "version": "0.4.0",
+  "scripts": {
+    "start": "./node_modules/.bin/electron touchbar.js"
+  },
+  "dependencies": {
+    "electron": "^2.0.4"
+  }
+}
