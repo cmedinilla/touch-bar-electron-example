@@ -2,18 +2,17 @@ const {app, BrowserWindow, TouchBar} = require('electron')
 
 const {TouchBarLabel, TouchBarButton, TouchBarSpacer} = TouchBar
 
-const spaces = (num) => Array(num + 1).join(' ');
+const spaces = (num) => Array(num + 1).join(' ')
 
 const changePosition = currentPosition => {
-  bar[currentPosition].label = spaces(marqueeText.length);
+  bar[currentPosition].label = spaces(marqueeText.length)
   if (currentPosition <  6)
     bar[currentPosition + 1].label = marqueeText
   else 
     bar[0].label = marqueeText
 }
 
-// Spin result label
-const bar = [];
+const bar = []
 const marqueeText = 'This is a marquee'
 
 for (let index = 0; index < 7; index++) {
@@ -26,14 +25,14 @@ for (let index = 0; index < 7; index++) {
 }
 
 setInterval(() => {
-  let currentPosition;
+  let currentPosition
   bar.forEach((e, index) => {
     if (e.label === marqueeText) {
       currentPosition = index
     }
-  });
+  })
   changePosition(currentPosition)
-}, 200);
+}, 200)
 
 //touchbar object
 const touchBar = new TouchBar(bar)
