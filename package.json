@@ -2,7 +2,8 @@
   "name": "touch-bar-electron-example",
   "version": "0.4.0",
   "scripts": {
-    "start": "./node_modules/.bin/electron touchbar.js"
+    "start": "./node_modules/.bin/electron touchbar.js",
+    "marquee": "./node_modules/.bin/electron marquee.js"
   },
   "dependencies": {
     "electron": "^2.0.4"
